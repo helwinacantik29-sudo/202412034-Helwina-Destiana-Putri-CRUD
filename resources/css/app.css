@@ -1,0 +1,450 @@
+:root {
+    --navy-900: #0f172a;
+    --navy-700: #1e293b;
+    --navy-500: #334155;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-400: #94a3b8;
+    --white: #ffffff;
+    --success-bg: #ecfdf5;
+    --success-text: #166534;
+    --danger-bg: #fef2f2;
+    --danger-text: #b91c1c;
+    --shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #edf2f7;
+    color: var(--navy-900);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+.app-shell {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: var(--white);
+    border-right: 1px solid var(--slate-200);
+    padding: 28px 18px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.brand-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 10px 26px;
+    border-bottom: 1px solid var(--slate-200);
+    margin-bottom: 20px;
+}
+
+.brand-mark {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: var(--navy-900);
+    color: var(--white);
+    font-weight: 700;
+}
+
+.brand-name {
+    font-size: 0.87rem;
+    letter-spacing: 0.14em;
+    font-weight: 700;
+    color: var(--navy-700);
+}
+
+.brand-subtitle {
+    font-size: 0.72rem;
+    color: var(--slate-400);
+    margin-top: 2px;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.8rem 0.9rem;
+    border-radius: 10px;
+    color: var(--navy-700);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: var(--slate-100);
+    color: var(--navy-900);
+}
+
+.main-panel {
+    flex: 1;
+    padding: 28px 32px 40px;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--slate-200);
+}
+
+.eyebrow {
+    margin: 0 0 4px;
+    font-size: 0.72rem;
+    line-height: 1;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--slate-400);
+}
+
+.topbar h1,
+.section-header h2 {
+    margin: 0;
+    color: var(--navy-900);
+}
+
+.topbar h1 {
+    font-size: clamp(1.75rem, 2vw, 2.25rem);
+}
+
+.topbar-badge {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--slate-200);
+    background: var(--white);
+    border-radius: 999px;
+    padding: 0.45rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--navy-700);
+}
+
+.alert {
+    margin-bottom: 20px;
+    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    font-weight: 600;
+}
+
+.alert-success {
+    background: var(--success-bg);
+    border-color: #bbf7d0;
+    color: var(--success-text);
+}
+
+.alert-error {
+    background: var(--danger-bg);
+    border-color: #fecaca;
+    color: var(--danger-text);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    padding: 20px 22px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--slate-400);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.stat-card strong {
+    display: block;
+    font-size: clamp(1.8rem, 2vw, 2.5rem);
+    line-height: 1.2;
+    color: var(--navy-900);
+}
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 22px;
+    margin-bottom: 24px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.table-header {
+    align-items: end;
+}
+
+.student-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--navy-700);
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    border: 1px solid var(--slate-200);
+    background: var(--white);
+    border-radius: 10px;
+    padding: 0.75rem 0.9rem;
+    color: var(--navy-900);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: var(--navy-500);
+    box-shadow: 0 0 0 3px rgba(51, 65, 85, 0.12);
+}
+
+.is-invalid {
+    border-color: #ef4444 !important;
+}
+
+.error-text {
+    color: #b91c1c;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    padding: 0.8rem 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    opacity: 0.96;
+}
+
+.btn-primary {
+    background: var(--navy-900);
+    color: var(--white);
+}
+
+.btn-secondary {
+    background: var(--slate-100);
+    color: var(--navy-900);
+}
+
+.btn-danger {
+    background: #ef4444;
+    color: var(--white);
+}
+
+.btn-ghost {
+    background: transparent;
+    border: 1px solid var(--slate-200);
+    color: var(--navy-700);
+}
+
+.btn-small {
+    padding: 0.55rem 0.8rem;
+    font-size: 0.82rem;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search-form input {
+    min-width: 220px;
+    border: 1px solid var(--slate-200);
+    background: var(--white);
+    border-radius: 10px;
+    padding: 0.72rem 0.9rem;
+    color: var(--navy-900);
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 720px;
+}
+
+thead th {
+    padding: 0.85rem 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--slate-200);
+    color: var(--navy-700);
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: #f8fafc;
+}
+
+tbody td {
+    padding: 0.9rem 0.75rem;
+    border-bottom: 1px solid var(--slate-200);
+    color: var(--navy-700);
+    vertical-align: top;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.action-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.action-group form {
+    margin: 0;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 24px 12px;
+    color: var(--slate-400);
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .app-shell {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        border-right: none;
+        border-bottom: 1px solid var(--slate-200);
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .main-panel {
+        padding: 20px 16px 28px;
+    }
+}
+
+@media (max-width: 640px) {
+    .stats-grid,
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar,
+    .section-header,
+    .table-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-form {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-form input,
+    .search-form .btn {
+        width: 100%;
+    }
+}
